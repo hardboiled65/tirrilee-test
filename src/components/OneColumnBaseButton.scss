@@ -1,0 +1,26 @@
+.OneColumnBaseButton {
+  width: 350px;
+  height: 158px;
+  background-color: #ffffff;
+  border-radius: 4px;
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .description {
+    font-size: 18px;
+    font-weight: bold;
+    color: #226bef;
+  }
+
+  &:active {
+    background-color: #3a7bf1;
+
+    .title, .description {
+      color: #ffffff;
+    }
+  }
+}

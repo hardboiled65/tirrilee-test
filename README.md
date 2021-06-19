@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+Tirrilee 간소화 견적 프로그램
+=============================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+티릴리 코딩 테스트용 리포지토리 입니다.
+
 
 ## Available Scripts
 
