@@ -2,6 +2,7 @@ import './StartPage.scss'
 
 import BaseButton from './components/BaseButton'
 import serviceIllust from './service_illust.svg'
+import { Link } from 'react-router-dom';
 
 const StartPage = () => {
   const baseButtonStyle = {
@@ -18,9 +19,11 @@ const StartPage = () => {
         </div>
         <img src={serviceIllust} className="service-illust" alt="service-illust" />
       </div>
-      <BaseButton
-        styles={baseButtonStyle}>{ '시작하기' }
-      </BaseButton>
+      <Link to='/step0' style={{ textDecoration: 'none', display: 'contents' }}>
+        <BaseButton
+          styles={baseButtonStyle}>{ '시작하기' }
+        </BaseButton>
+      </Link>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-import './OneColumnBaseButton.scss'
+import './SimpleContentButton.scss'
 
-const OneColumnBaseButton = ({title, description, noShadow}) => {
+const SimpleContentButton = ({title, description, noShadow}) => {
   const [active, setActive] = useState(false);
   
   const style = {
@@ -20,7 +20,7 @@ const OneColumnBaseButton = ({title, description, noShadow}) => {
   }
 
   return (
-    <div className="OneColumnBaseButton"
+    <div className="SimpleContentButton"
       style={style}
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}>
@@ -30,4 +30,4 @@ const OneColumnBaseButton = ({title, description, noShadow}) => {
   );
 }
 
-export default OneColumnBaseButton
+export default SimpleContentButton
