@@ -7,4 +7,11 @@
     align-items: center;
     justify-content: center;
   }
+
+  .buttons {
+    display: flex;
+    width: calc(100% - 24px);
+    margin: 40px auto;
+    justify-content: space-between;
+  }
 }

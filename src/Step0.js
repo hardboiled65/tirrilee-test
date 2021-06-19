@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './Step0.scss'
 
 import DetailContentButton from './components/DetailContentButton'
+import BaseButton from './components/BaseButton'
 
 const Step0 = () => {
   // ['none', 'app', 'web']
@@ -19,8 +20,7 @@ const Step0 = () => {
         description="300만원"
         active={selection === 'app'}
         styles={{
-          width: '100%',
-          margin: '0 12px 0 12px',
+          width: 'calc(100% - 24px)',
         }}
         onClick={() => { setSelection('app'); }}
       />
@@ -30,12 +30,27 @@ const Step0 = () => {
         description="400만원"
         active={selection === 'web'}
         styles={{
-          width: '100%',
-          margin: '20px 12px 0 12px',
+          width: 'calc(100% - 24px)',
+          marginTop: '20px',
         }}
         onClick={() => { setSelection('web'); }}
       />
-      <div className="buttons"></div>
+      <div className="buttons">
+        <BaseButton
+          width={167}
+          height={48}
+          fontSize={14}
+          bold={false}
+          fontColor={'#000000'}>이전 단계</BaseButton>
+        <BaseButton
+          width={167}
+          height={48}
+          fontSize={14}
+          bold={false}
+          fontColor={'#000000'}
+          glow={selection !== 'none'}
+          disabled={selection === 'none'}>다음 단계</BaseButton>
+      </div>
     </div>
   );
 }
