@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import './Step0.scss'
 
@@ -8,6 +9,17 @@ import BaseButton from './components/BaseButton'
 const Step0 = () => {
   // ['none', 'app', 'web']
   const [selection, setSelection] = useState('none');
+
+  const history = useHistory();
+
+  function goBack() {
+    history.goBack();
+  }
+
+  function goNext() {
+    history.push('/step1');
+  }
+
 
   return (
     <div className="Step0">
@@ -41,7 +53,8 @@ const Step0 = () => {
           height={48}
           fontSize={14}
           bold={false}
-          fontColor={'#000000'}>이전 단계</BaseButton>
+          fontColor={'#000000'}
+          onClick={goBack}>이전 단계</BaseButton>
         <BaseButton
           width={167}
           height={48}
@@ -49,8 +62,16 @@ const Step0 = () => {
           bold={false}
           fontColor={'#000000'}
           glow={selection !== 'none'}
-          disabled={selection === 'none'}>다음 단계</BaseButton>
+          disabled={selection === 'none'}
+          onClick={goNext}>다음 단계</BaseButton>
       </div>
+      <p
+        style={{
+          marginTop: '56px',
+          fontSize: '14px',
+          color: '#6d6c6c',
+        }}
+      >1 / 3</p>
     </div>
   );
 }
