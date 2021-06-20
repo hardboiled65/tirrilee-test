@@ -1,0 +1,33 @@
+.ContentCheckboxSmall {
+  display: inline-flex;
+  width: 350px;
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-between;
+
+  > .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 24px;
+  }
+
+  > .description {
+    font-size: 18px;
+    font-weight: bold;
+    color: #226bef;
+    position: absolute;
+    right: 78px;
+
+    &.checked {
+      color: #ffffff;
+    }
+  }
+
+  > img {
+    width: 32px;
+    height: 32px;
+    margin-right: 24px;
+  }
+}
