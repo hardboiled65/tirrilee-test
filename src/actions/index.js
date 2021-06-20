@@ -27,3 +27,7 @@ export function setDesignPrice(payload) {
 export function setPageMultiple(payload) {
   return { type: SET_PAGE_MULTIPLE, payload };
 }
+
+export function setAdditionalFeatures(payload) {
+  return { type: SET_ADDITIONAL_FEATURES, payload };
+}

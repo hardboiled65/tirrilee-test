@@ -55,7 +55,9 @@ function rootReducer(state = initialState, action) {
         pageMultiple: action.payload,
       });
     case SET_ADDITIONAL_FEATURES:
-      return state;
+      return Object.assign({}, state, {
+        additionalFeatures: action.payload,
+      });
     case SET_ADMIN:
       return state;
     default:
