@@ -2,6 +2,10 @@ import {
   ADD_PRICE,
   SET_SERVICE_TYPE_PRICE,
   SET_DETAIL_PLAN_PRICE,
+  SET_DESIGN_PRICE,
+  SET_PAGE_MULTIPLE,
+  SET_ADDITIONAL_FEATURES,
+  SET_ADMIN,
 } from '../constants/action-types'
 
 const initialState = {
@@ -9,7 +13,7 @@ const initialState = {
   serviceTypePrice: 0,
   detailPlanPrice: 0,
   designPrice: 0,
-  pageMultiple: 0,
+  pageMultiple: 1,
   additionalFeatures: {
     gps: false,
     map: false,
@@ -42,6 +46,16 @@ function rootReducer(state = initialState, action) {
       return Object.assign({}, state, {
         detailPlanPrice: action.payload,
       });
+    case SET_DESIGN_PRICE:
+      return Object.assign({}, state, {
+        designPrice: action.payload,
+      });
+    case SET_PAGE_MULTIPLE:
+      return state;
+    case SET_ADDITIONAL_FEATURES:
+      return state;
+    case SET_ADMIN:
+      return state;
     default:
       break;
   }

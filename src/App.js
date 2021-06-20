@@ -6,6 +6,7 @@ import Header from './components/Header'
 import StartPage from './StartPage'
 import Step0 from './Step0'
 import Step1 from './Step1'
+import Step2 from './Step2'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/' component={StartPage} exact={true} />
       <Route path='/step0' component={Step0} />
       <Route path='/step1' component={Step1} />
+      <Route path='/step2' component={Step2} />
     </div>
   );
 }
