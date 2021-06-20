@@ -1,0 +1,3 @@
+export const ADD_PRICE = 'ADD_PRICE'
+export const SET_SERVICE_TYPE_PRICE = 'SET_SERVICE_TYPE_PRICE'
+

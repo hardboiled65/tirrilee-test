@@ -1,12 +1,16 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import './Step0.scss'
 
 import DetailContentButton from './components/DetailContentButton'
 import BaseButton from './components/BaseButton'
+import store from './store/index'
+import { setServiceTypePrice } from './actions/index'
 
-const Step0 = () => {
+
+const Step0 = (props) => {
   // ['none', 'app', 'web']
   const [selection, setSelection] = useState('none');
 
@@ -19,6 +23,27 @@ const Step0 = () => {
   function goNext() {
     history.push('/step1');
   }
+
+  useEffect(() => {
+    const price = store.getState().serviceTypePrice;
+    if (price !== 0) {
+      if (price === 300) {
+        setSelection('app');
+      } else if (price === 400) {
+        setSelection('web');
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    let price = 0;
+    if (selection === 'app') {
+      price = 300;
+    } else if (selection === 'web') {
+      price = 400;
+    }
+    props.dispatch(setServiceTypePrice(price));
+  }, [props, selection]);
 
 
   return (
@@ -76,4 +101,8 @@ const Step0 = () => {
   );
 }
 
-export default Step0
+const mapStateToProps = state => {
+  return { serviceTypePrice: state.serviceTypePrice };
+};
+
+export default connect(mapStateToProps)(Step0)
