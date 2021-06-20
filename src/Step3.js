@@ -58,7 +58,7 @@ const Step3 = (props) => {
         <ContentButtonSmall
           title="~20P"
           description="기본 금액 x1"
-          active={selection === true}
+          active={selection === 'x1'}
           styles={{
             width: 'calc(100% - 24px)',
             marginTop: '40px',
@@ -68,7 +68,7 @@ const Step3 = (props) => {
         <ContentButtonSmall
           title="21P~30P"
           description="기본 금액 x2"
-          active={selection === false}
+          active={selection === 'x2'}
           styles={{
             width: 'calc(100% - 24px)',
             marginTop: '20px',
