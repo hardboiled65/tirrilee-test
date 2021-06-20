@@ -1,0 +1,45 @@
+.Step1 {
+  .main-section {
+    height: 107px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+
+    > .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    > .description {
+      font-size: 14px;
+      color: #a0a0a0;
+      margin-top: 18px;
+    }
+  }
+
+  .inner-section {
+    height: 552px;
+    background-color: #f8fafe;
+
+    > .title {
+      font-size: 18px;
+      font-weight: bold;
+      padding-top: 32px;
+    }
+
+    > .description {
+      width: calc(100% - 32px);
+      font-size: 14px;
+      color: #a0a0a0;
+      margin: 12px auto;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    width: calc(100% - 24px);
+    margin: 39px auto;
+    justify-content: space-between;
+  }
+}

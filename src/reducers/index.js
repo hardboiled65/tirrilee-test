@@ -1,4 +1,8 @@
-import { ADD_PRICE, SET_SERVICE_TYPE_PRICE } from '../constants/action-types'
+import {
+  ADD_PRICE,
+  SET_SERVICE_TYPE_PRICE,
+  SET_DETAIL_PLAN_PRICE,
+} from '../constants/action-types'
 
 const initialState = {
   price: 0,
@@ -31,9 +35,13 @@ function rootReducer(state = initialState, action) {
         price: state.price + action.payload,
       };
     case SET_SERVICE_TYPE_PRICE:
-      return {
+      return Object.assign({}, state, {
         serviceTypePrice: action.payload,
-      };
+      });
+    case SET_DETAIL_PLAN_PRICE:
+      return Object.assign({}, state, {
+        detailPlanPrice: action.payload,
+      });
     default:
       break;
   }
