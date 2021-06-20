@@ -23,3 +23,7 @@ export function setDetailPlanPrice(payload) {
 export function setDesignPrice(payload) {
   return { type: SET_DESIGN_PRICE, payload };
 }
+
+export function setPageMultiple(payload) {
+  return { type: SET_PAGE_MULTIPLE, payload };
+}

@@ -13,7 +13,7 @@ const initialState = {
   serviceTypePrice: 0,
   detailPlanPrice: 0,
   designPrice: 0,
-  pageMultiple: 1,
+  pageMultiple: 0,
   additionalFeatures: {
     gps: false,
     map: false,
@@ -51,7 +51,9 @@ function rootReducer(state = initialState, action) {
         designPrice: action.payload,
       });
     case SET_PAGE_MULTIPLE:
-      return state;
+      return Object.assign({}, state, {
+        pageMultiple: action.payload,
+      });
     case SET_ADDITIONAL_FEATURES:
       return state;
     case SET_ADMIN:
