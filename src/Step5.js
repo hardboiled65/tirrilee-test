@@ -181,7 +181,7 @@ const Step5 = (props) => {
 }
 
 const mapStateToProps = state => {
-  return { additionalFeatures: state.additionalFeatures };
+  return { admin: state.admin };
 };
 
 export default connect(mapStateToProps)(Step5)
