@@ -190,7 +190,7 @@ const Step4 = (props) => {
           bold={false}
           fontColor={'#000000'}
           glow={true}
-          disabled={true}
+          disabled={false}
           onClick={goNext}>다음 단계</BaseButton>
       </div>
     </div>

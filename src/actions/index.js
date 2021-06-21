@@ -31,3 +31,7 @@ export function setPageMultiple(payload) {
 export function setAdditionalFeatures(payload) {
   return { type: SET_ADDITIONAL_FEATURES, payload };
 }
+
+export function setAdmin(payload) {
+  return { type: SET_ADMIN, payload };
+}

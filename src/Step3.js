@@ -90,8 +90,8 @@ const Step3 = (props) => {
           fontSize={14}
           bold={false}
           fontColor={'#000000'}
-          glow={selection !== null}
-          disabled={selection === null}
+          glow={selection !== 'none'}
+          disabled={selection === 'none'}
           onClick={goNext}>다음 단계</BaseButton>
       </div>
     </div>

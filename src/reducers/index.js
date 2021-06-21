@@ -59,7 +59,9 @@ function rootReducer(state = initialState, action) {
         additionalFeatures: action.payload,
       });
     case SET_ADMIN:
-      return state;
+      return Object.assign({}, state, {
+        admin: action.payload,
+      });
     default:
       break;
   }
