@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-// import './StepFinal.scss'
+import './StepFinal.scss'
 
 import BaseButton from './components/BaseButton'
 import store from './store/index'
@@ -97,22 +97,26 @@ const StepFinal = () => {
 
   return (
     <div className="StepFinal">
-      <div>수고하셨습니다.</div>
-      <div>선택 프로젝트 : { serviceType }</div>
-      <div>견적 가격 : 대략 { totalPrice }만원</div>
-      <div>입니다.</div>
+      <div className="result">
+        <div>수고하셨습니다.</div>
+        <div style={{ color: '#226bef' }}>선택 프로젝트 : { serviceType }</div>
+        <div style={{ color: '#226bef' }}>견적 가격 : 대략 { totalPrice }만원</div>
+        <div>입니다.</div>
+      </div>
       <div className="detail">하지만 정확한 견적은 아니에요 :)<br />
 티릴리와 함께 같이 진단해보고 멋진 서비스를 만들어보아요.</div>
       <BaseButton
-      glow={true}
-      onClick={goFirst}>다시하기
+        bold={true}
+        glow={true}
+        styles={{
+          width: 'calc(100% - 24px)',
+          margin: 'auto',
+        }}
+        onClick={goFirst}>다시하기
       </BaseButton>
     </div>
   );
 }
 
-const mapStateToProps = state => {
-  return { admin: state.admin };
-};
 
 export default connect()(StepFinal)

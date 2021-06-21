@@ -4,4 +4,35 @@
   height: 184px;
   background-color: #ffffff;
   flex-direction: column;
+
+  > img {
+    width: 32px;
+    height: 32px;
+    align-self: end;
+  }
+
+  > .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 16px;
+  }
+
+  > .detail {
+    font-size: 14px;
+    color: #9e9e9e;
+    margin-top: 8px;
+    &.checked {
+      color: #ffffff;
+    }
+  }
+
+  > .description {
+    font-size: 18px;
+    font-weight: bold;
+    color: #226bef;
+    margin-top: 26px;
+    &.checked {
+      color: #ffffff;
+    }
+  }
 }

@@ -1,0 +1,18 @@
+.StepFinal {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 101px auto;
+
+  > .result {
+    margin: auto;
+    max-width: calc(100% - 170px);
+  }
+
+  > .detail {
+    font-size: 13px;
+    font-weight: normal;
+    color: #4d4d4d;
+    margin-top: 82px;
+    margin-bottom: 105px;
+  }
+}

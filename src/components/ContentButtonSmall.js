@@ -15,7 +15,7 @@ const ContentButtonSmall = ({title, description, noShadow, active, styles, onCli
       style={style}
       onClick={onClick}>
       <div className="title">{ title }</div>
-      <div className="description">{ description }</div>
+      <div className={`description ${active ? 'active' : ''}`}>{ description }</div>
     </div>
   );
 }
